@@ -196,6 +196,9 @@ a {
 }
 
 @media only screen and (max-width: 376px) {
+    header {
+        padding: 30px 30px;
+    }
   .nav_container {
     width: 45%;
     right: -10dvw;
