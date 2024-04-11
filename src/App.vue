@@ -5,9 +5,9 @@ import Hero from './components/Hero.vue';
 
 <template>
   <Header />
-  <main>
+ <!-- <main>
     <Hero />
-  </main>
+  </main> -->
 </template>
 
 <style>
