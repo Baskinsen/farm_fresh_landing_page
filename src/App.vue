@@ -6,8 +6,9 @@ import WhyChooseUsVue from './components/WhyChooseUs.vue';
 
 <template>
   <Header />
-  <main>
+ <!-- <main>
     <Hero />
+  </main> -->
     <WhyChooseUsVue />
   </main>
 </template>
