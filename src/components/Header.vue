@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav>
-      <img src="../assets/images/FreshFarm.svg" alt="Farmfreh logo" />
+      <img src="../assets/images/FreshFarm.svg" alt="Farmfreh logo" class="logo" />
       <img src="../assets/images/menu.png" alt="menu" class="menu" ref="menu" />
       <div class="nav_container" id="nav" ref="nav">
         <ul>
@@ -125,6 +125,27 @@ a {
   z-index: 1;
   float: right;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1046px) {
+    header {
+        padding: 30px 0;
+    }
+
+    .logo {
+        width: 15%;
+    }
+
+    nav {
+        gap: 30px;
+        padding: 0;
+    }
+
+    .nav_container {
+        gap: 30px;
+    }
+    
+    
 }
 
 @media only screen and (max-width: 768px) {

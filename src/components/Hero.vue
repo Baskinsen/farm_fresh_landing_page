@@ -60,6 +60,12 @@ export default {};
         width: 100%;
     }
 
+    @media only screen and (max-width: 1046px) {
+        .hero {
+            padding: 30px 50px;
+        }
+    }
+
     @media only screen and (max-width: 768px) {
         .hero {
             grid-template-columns: none;

@@ -1,12 +1,14 @@
 <script setup>
 import Header from './components/Header.vue';
 import Hero from './components/Hero.vue';
+import WhyChooseUsVue from './components/WhyChooseUs.vue';
 </script>
 
 <template>
   <Header />
   <main>
     <Hero />
+    <WhyChooseUsVue />
   </main>
 </template>
 
