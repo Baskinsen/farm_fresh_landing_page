@@ -21,17 +21,17 @@
         <p>Organic meals are grown without use of chemicals</p>
       </div>
     </div>
-    <div>
+    <div class="stats">
       <div>
-        <h1>400+</h1>
+        <h2>400+</h2>
         <p>Food Partners</p>
       </div>
       <div>
-        <h1>500+</h1>
+        <h2>500+</h2>
         <p>Trusted Clients</p>
       </div>
       <div>
-        <h1>10K+</h1>
+        <h2>10K+</h2>
         <p>Orders Online</p>
       </div>
     </div>
@@ -44,17 +44,21 @@ export default {};
 
 <style scoped>
 .why_choose_us {
-  padding: 30px 150px;
+  display: grid;
+  gap: 50px;
 }
 
 .discription {
   text-align: center;
+  display: grid;
+  gap: 20px;
 }
 
 .discription h2 {
   font-size: 40px;
   font-weight: 700;
   line-height: 52.01px;
+  margin: 0 auto;
 }
 
 .discription p {
@@ -68,5 +72,123 @@ export default {};
     justify-content: center;
     align-items: center;
     gap: 50px;
+    width: 100%;
+    
 }
+
+.details div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border: 1px solid #3A3A3A1A;
+    padding: 20px 20px;
+    width: 100%;
+}
+
+.details img {
+    width: 100px;
+}
+
+.details h3, p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.details h3 {
+    font-weight: 700;
+    
+}
+
+.details p {
+    font-weight: 500;
+    line-height: 32.4px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.stats div h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.stats div p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32.4px;
+    text-align: center;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .why_choose_us {
+    padding: 30px 50px;
+  }
+
+
+  .details div {
+    width: 100%;
+  }
+
+  .details img {
+    width: 50%;
+  }
+
+  
+}
+@media only screen and (max-width: 768px) {
+  .why_choose_us {
+    padding: 30px 50px;
+  }
+
+  .details {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .details div {
+    width: 50%;
+  }
+
+  .details img {
+    width: 20%;
+  }
+
+
+
+  .stats div {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width:426px) {
+  .why_choose_us {
+    padding: 0px 50px;
+  }
+
+  .stats div h2 {
+    font-size: 20px;
+  }
+
+  .stats div p {
+    font-size: 16px;
+    
+  }
+}
+
 </style>

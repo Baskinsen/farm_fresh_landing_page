@@ -2,7 +2,11 @@
   <header>
     <nav>
       <img src="../assets/images/FreshFarm.svg" alt="Farmfreh logo" class="logo" />
-      <img src="../assets/images/menu.png" alt="menu" class="menu" ref="menu" />
+      <div @click="toggleNav">
+        <img v-if="!showMobileNav" src="../assets/images/menu.png" alt="menu" class="menu"  />
+        <img  v-else src="../assets/images/icon-menu-close.svg" alt="close menu">
+      </div>
+      
       <div class="nav_container" id="nav" ref="nav">
         <ul>
           <li><a href="">Home</a></li>
@@ -28,20 +32,25 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
-const menu = ref(null);
-const nav = ref(null)
-onMounted(() => {
-  menu.value.addEventListener("click", () => {
-    console.log(menu.value.src)
-    menu.value.src =
-      nav.value.style.display == "none"
-        ? "../assets/images/icon-menu-close.svg"
-        : "../assets/images/menu.png";
-   nav.value.style.display == "none"
-      ? (nav.value.style.display = "block")
-      : (nav.value.style.display = "none");
-  });
-});
+const showMobileNav = ref(false);
+// const menu = ref(null);
+// const nav = ref(null)
+// onMounted(() => {
+//   menu.value.addEventListener("click", () => {
+//     console.log(menu.value.src)
+//     menu.value.src =
+//       nav.value.style.display == "none"
+//         ? "../assets/images/icon-menu-close.svg"
+//         : "../assets/images/menu.png";
+//    nav.value.style.display == "none"
+//       ? (nav.value.style.display = "block")
+//       : (nav.value.style.display = "none");
+//   });
+// });
+
+const toggleNav = () => {
+  showMobileNav.value = !showMobileNav.value;
+};
 </script>
 
 <style scoped>
@@ -58,8 +67,7 @@ header {
 
 nav {
   display: flex;
-  justify-content: center;
-  gap: 150px;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -86,13 +94,6 @@ nav ul li {
 
 .login_order {
   gap: 30px;
-}
-
-.order_button {
-  /* padding: 10px 30px;
-  background-color: #008000;
-  cursor: pointer;
-  border-radius: 5px; */
 }
 
 button {
@@ -127,6 +128,21 @@ a {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1440px) {
+  header {
+    padding: 30px 50px;
+  }
+
+  nav {
+    gap: 100px;
+  }
+
+  .nav_container {
+    gap: 100px;
+  }
+
+}
+
 @media only screen and (max-width: 1046px) {
     header {
         padding: 30px 0;
@@ -149,9 +165,13 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+  header {
+    padding: 30px 50px;
+  }
   nav {
     align-items: center;
-    gap: 40dvw;
+    
+    gap: 70dvw;
   }
   .menu {
     display: initial;
@@ -204,12 +224,16 @@ a {
 }
 
 @media only screen and (max-width: 426px) {
+  .logo {
+    width: 30%;
+  }
+
   header {
     padding: 30px 50px;
   }
 
   nav {
-    gap: 20dvw;
+    gap: 50dvw;
   }
   .nav_container {
     width: 40%;

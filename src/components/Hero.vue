@@ -24,15 +24,12 @@ export default {};
     .hero {
         display: grid;
         grid-template-columns: 50% 50%;
-        padding: 30px 150px;
-        justify-content: center;
-        align-items: center;
     }
 
     .hero-discription {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 30px;
         align-items: flex-start;
     }
 
@@ -54,15 +51,20 @@ export default {};
         font-size: 20px;
         line-height: 32.4px;
         margin: 0;
+        width: 65%;
     }
 
     img {
         width: 100%;
+        
     }
 
     @media only screen and (max-width: 1046px) {
         .hero {
             padding: 30px 50px;
+        }
+        .hero h1 {
+            font-size: 50px;
         }
     }
 
