@@ -62,7 +62,8 @@ body {
 }
 
 header {
-  padding: 30px 100px;
+  padding: 30px 50px;
+  width: 100%;
 }
 
 nav {
@@ -141,11 +142,14 @@ a {
     gap: 100px;
   }
 
+  
+
 }
 
 @media only screen and (max-width: 1046px) {
     header {
-        padding: 30px 0;
+        padding: 30px 50px;
+        width: 100%;
     }
 
     .logo {
@@ -167,6 +171,7 @@ a {
 @media only screen and (max-width: 768px) {
   header {
     padding: 30px 50px;
+    width: 100%;
   }
   nav {
     align-items: center;
@@ -175,6 +180,8 @@ a {
   }
   .menu {
     display: initial;
+    float: right;
+    left: 10dvw;
   }
   .nav_container {
     position: absolute;
@@ -255,7 +262,13 @@ a {
     padding: 30px 20px;
   }
   nav {
-    gap: 10dvw;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: initial;
+    float: right;
+    left: 0dvw;
   }
 
   .nav_container {

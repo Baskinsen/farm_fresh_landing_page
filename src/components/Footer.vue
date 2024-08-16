@@ -35,9 +35,10 @@
 <style scoped>
 footer {
   background-color: #F5F5F5;
-  padding:  50px 100px;
+  padding:  50px;
   display: grid;
   gap: 10px;
+  width: 100%;
 }
 
 div {
@@ -89,6 +90,23 @@ ul {
   & li {
     margin: 0;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  footer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+   footer {
+    padding: 30px 20px;
+  }
+  div:first-child:not(:has(p)) {
+    flex-direction: column;
+    gap: 20px;
+    
   }
 }
 </style>

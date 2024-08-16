@@ -34,9 +34,9 @@
 section {
   display: grid;
   grid-template-columns: 35% 60%;
-  gap: 80px;
+  gap: 50px;
   height: 100vh;
- 
+  width: 100%;
 }
 
 div:first-child {
@@ -58,7 +58,7 @@ div:first-child {
   & p {
     font: 16px 500;
     line-height: 32.4px;
-    align-items: start;
+    text-align: justify;
   }
 }
 
@@ -66,7 +66,7 @@ div:last-child {
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 45% 55%;
-  column-gap: 30px;
+  column-gap: 10px;
   height: 100%;
   width: 100%;
 }
@@ -93,4 +93,60 @@ img:last-child {
   margin: auto 0;
   width: 100%;
 }
+
+@media only screen and (max-width: 1024px) {
+  section {
+    gap: 50px;
+    width: 100%;
+  }
+   div:last-child {
+  column-gap: 5px;
+ 
+}
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  div:first-child {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+
+    & h2 {
+      text-align: center;
+    }
+
+    & p {
+      text-align: center;
+    }
+  }
+
+  div:last-child {
+  column-gap: 10px;
+  height: 100%;
+  width: 100%;
+}
+}
+
+@media only screen and (max-width:426px) {
+  div:first-child {
+    & p {
+      width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  div:last-child {
+    width: 100%;
+   
+  }
+} 
 </style>

@@ -29,7 +29,9 @@ import Footer from './components/Footer.vue';
 main {
   display: grid;
   gap: 100px;
-  padding: 30px 100px;
+  padding: 30px 50px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 button {
@@ -45,5 +47,18 @@ button {
 button a {
   color: #ffffff;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1046px) {
+  main {
+    padding: 30px 50px;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  main {
+    padding: 30px 20px;
+    width: 100%;
+  }
 }
 </style>

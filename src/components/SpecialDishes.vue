@@ -44,6 +44,7 @@ export default {};
   flex-direction: column;
   gap: 50px;
   align-items: flex-start;
+  width:100%;
 }
 
 .discription {
@@ -140,20 +141,27 @@ button {
 
 @media only screen and (max-width: 1024px) {
   .why_choose_us {
-    padding: 30px 50px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .details {
+    gap: 30px;
   }
 
   .details div {
     width: 100%;
+    padding: 20px;
   }
 
   .details img {
-    width: 50%;
+    width: 70%;
   }
 }
 @media only screen and (max-width: 768px) {
   .why_choose_us {
-    padding: 30px 50px;
+    padding: 0;
+    width: 100%;
   }
 
   .details {
@@ -166,7 +174,7 @@ button {
   }
 
   .details img {
-    width: 20%;
+    width: 50%;
   }
 
   .stats div {
@@ -176,7 +184,21 @@ button {
 
 @media only screen and (max-width: 426px) {
   .why_choose_us {
-    padding: 0px 50px;
+  
+  }
+
+  .discription h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .details div {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .details div img {
+    width: 70%;
   }
 
   .stats div h2 {

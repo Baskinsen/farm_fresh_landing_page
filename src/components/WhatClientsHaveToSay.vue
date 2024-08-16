@@ -46,6 +46,7 @@ export default {};
   flex-direction: column;
   gap: 50px;
   align-items: flex-start;
+  width: 100%;
 }
 
 .discription {
@@ -125,7 +126,8 @@ export default {};
 
 @media only screen and (max-width: 1024px) {
   .what_clients_have {
-    padding: 30px 50px;
+    padding: 0;
+    width: 100%;
   }
 
   .details div {
@@ -133,12 +135,13 @@ export default {};
   }
 
   .details img {
-    width: 50%;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 768px) {
   .what_clients_have {
-    padding: 30px 50px;
+    padding:0;
+    width: 100%;
   }
 
   .details {
@@ -147,7 +150,7 @@ export default {};
   }
 
   .details div {
-    width: 50%;
+    width: 75%;
   }
 
   .details img {
@@ -158,10 +161,30 @@ export default {};
 }
 
 @media only screen and (max-width: 426px) {
-  .why_clients_have {
-    padding: 0px 50px;
+
+  .what_clients_have {
+    padding: 0;
+  
   }
 
+  .discription h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 
+  .details {
+    width: 100%;
+
+  }
+
+  .details_div {
+    width: 100%;
+  }
+
+  .details div {
+    width: 100%;
+  }
+
+  
 }
 </style>
